@@ -1,0 +1,243 @@
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #0b0f17;
+  color: #eaf0ff;
+}
+
+.btn {
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #4c7dff;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn.ghost { background: rgba(255,255,255,0.08); }
+.btn.small { padding: 8px 12px; border-radius: 10px; }
+
+.muted { color: rgba(234, 240, 255, 0.7); }
+
+/* ---------- MAIN PAGE GRID (rows + columns) ---------- */
+/*
+  This is your BIG "Grid solves layout" example:
+  - 2 columns (sidebar + content)
+  - 2 rows (topbar + rest)
+*/
+.app {
+  min-height: 100vh;
+  padding: 16px;
+
+  display: grid;
+
+  /* COLUMNS */
+  grid-template-columns: 280px 1fr;
+
+  /* ROWS */
+  grid-template-rows: auto 1fr;
+
+  /* Areas (easier teaching) */
+  grid-template-areas:
+    "topbar  topbar"
+    "sidebar content";
+
+  gap: 16px;
+}
+
+/* Put each section in its area */
+.topbar  { grid-area: topbar; }
+.sidebar { grid-area: sidebar; }
+.content { grid-area: content; }
+
+/* ---------- Topbar itself uses grid too ---------- */
+.topbar {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 14px;
+
+  display: grid;
+  grid-template-columns: 160px 1fr auto; /* brand | search | buttons */
+  align-items: center;
+  gap: 12px;
+}
+
+.brand { font-weight: 800; letter-spacing: 0.5px; }
+
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.25);
+  color: #eaf0ff;
+  outline: none;
+}
+
+.top-actions { display: flex; gap: 10px; }
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.chip-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 16px; }
+.chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  font-weight: 600;
+  font-size: 14px;
+}
+.chip.active { background: rgba(76,125,255,0.25); border-color: rgba(76,125,255,0.55); }
+
+.side-block {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
+.label { margin: 0 0 8px; font-weight: 700; }
+.check { display: block; margin: 8px 0; color: rgba(234,240,255,0.85); }
+
+.bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+.bar span {
+  display: block;
+  height: 100%;
+  background: #4c7dff;
+}
+
+/* ---------- Content ---------- */
+.content {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.content-head h1 { margin: 0 0 6px; }
+.content-head p  { margin: 0 0 16px; }
+
+/* ---------- CARDS GRID (the main Grid lesson) ---------- */
+/*
+  Key Grid properties here:
+  - grid-template-columns: responsive columns with auto-fit + minmax
+  - gap: spacing
+  - grid-auto-flow: dense: fills holes when some items span
+  - grid-auto-rows: sets height of implicit rows
+*/
+.cards-grid {
+  display: grid;
+
+  /* RESPONSIVE COLUMNS */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 14px;
+
+  /* Helps pack items when you have spans */
+  grid-auto-flow: dense;
+
+  /* Creates consistent row sizing for implicit rows */
+  grid-auto-rows: minmax(180px, auto);
+
+  /* Optional alignment teaching */
+  align-items: stretch;   /* items fill their grid cell vertically */
+  justify-items: stretch; /* items fill their grid cell horizontally */
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  overflow: hidden;
+
+  /* Card layout is also grid (thumb + body) */
+  display: grid;
+  grid-template-rows: 140px 1fr;
+}
+
+.thumb {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(76,125,255,0.55), transparent 50%),
+    radial-gradient(circle at 70% 40%, rgba(255,255,255,0.20), transparent 55%),
+    rgba(255,255,255,0.06);
+}
+
+.card-body {
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.tag {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.12);
+  font-weight: 700;
+}
+.tag.hot { background: rgba(76,125,255,0.25); border-color: rgba(76,125,255,0.55); }
+
+.card h2 { margin: 0; font-size: 18px; }
+.card p  { margin: 0; }
+
+.card-foot {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stat { font-weight: 700; opacity: 0.9; }
+
+/* ---------- SPANS (the “powerful” part) ---------- */
+.featured {
+  grid-column: span 2; /* take 2 columns */
+  grid-row: span 2;    /* take 2 rows */
+}
+.wide {
+  grid-column: span 2; /* take 2 columns */
+}
+
+/* ---------- Responsive page layout ---------- */
+@media (max-width: 900px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "topbar"
+      "sidebar"
+      "content";
+  }
+
+  .topbar {
+    grid-template-columns: 1fr; /* stack brand, search, actions */
+  }
+
+  /* On smaller screens, don't force spans */
+  .featured, .wide {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
