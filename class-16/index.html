@@ -1,363 +1,118 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title> RNC Jewellery </title>
+<title>Assignment 5 Portfolio</title>
 
-  <meta name="viewport" content="width=device-width, intial-scale =1.0">
-
-  <style>
-    h1 {
-      color: orange
-    }
-
-    h3 {
-      margin-top: 25px;
-      color: blueviolet
-    }
-
-    img {
-      text-align: center
-    }
-
-    .anchor {
-      text-align: center;
-      margin-left: 90px;
-      color: brown;
-    }
-
-
-
-    .containerr {
-      margin-left: 10px;
-    }
-
-    .section {
-      display: flex;
-      margin-left: 10px;
-      margin-top: 10px;
-      margin-right: 10px;
-      text-align: center;
-      gap: 10;
-      scroll-margin-top: 80px;
-
-    }
-
-    .input {
-      margin-top: 100px;
-      padding-left: 100px;
-    }
-
-    .error-message {
-      color: red;
-      display: none;
-
-      /* Hide by default */
-    }
-
-    .header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 20px;
-      background: #ece00cdd;
-      color: blue;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 9999;
-      box-sizing: border-box;
-    }
-
-    .relative-box {
-      position: relative;
-      padding: 10px;
-    }
-
-    .sticky-header {
-      position: sticky;
-      top: 0;
-      background: orange;
-      padding: 15px;
-      font-size: 20px;
-    }
-
-
-    /* Sticky Footer */
-    .footer {
-      position: sticky;
-      bottom: 0;
-      background: #ece00cdd;
-      color: white;
-      text-align: center;
-      padding: 3px 0;
-    }
-
-    .card {
-      position: relative;
-      margin-left: 100px;
-    }
-
-    .tag {
-      position: absolute;
-      top: 3px;
-      left: 10px;
-      background: gold;
-      padding: 5px;
-      font-weight: bold;
-    }
-
-    .nav {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .content {
-      height: 1000px;
-      padding: 20px;
-    }
-
-    .description {
-      color: #555;
-      font-size: 14px;
-    }
-
-
-    .body {
-      max-width: 1200px;
-      margin: 0;
-      max-height: 500px;
-      padding-top: 70px;
-    }
-
-    @media (max-width: 1024px) {
-      .img {
-        margin-top: 30px;
-      }
-    }
-
-     @media (max-width: 768px) { 
-      .img {
-        margin-top: 20px;
-      }
-    }
-
-    .img {
-      width: 100%;
-      max-width: 1500px;
-      height: auto;
-      align-self: center;
-      max-height: 300px; 
-      margin-top: 50px;
-      display: block;
-      z-index: 9999;
-    }
-  </style>
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
+<body>
 
-<body style="background-color: bisque;">
-<iframe
-    allow="microphone;"
-    width="350"
-    height="430"
-    src="https://console.dialogflow.com/api-client/demo/embedded/d91cb64b-d934-4e8f-bc14-d40fd6b0035e">
-</iframe>
-  <header class="header">
+<!-- Header -->
+<div class="container text-center mt-4">
+<h1>My Bootstrap Website</h1>
+<p class="text-muted">Simple Responsive Website Using Bootstrap</p>
+</div>
 
-    <h2> RNC JEWELLERY </h2>
+<!-- Cards Section -->
+<div class="container mt-5 mb-5">
 
-    <!-- style ='text-align : center; color : rgba(220, 26, 42, 0.879);' 
-style='text-align: justify;' 
--->
-    <nav class="nav">
-      <a class="anchor" href="#home"> Home </a>
-      <a class="anchor" href="#about"> About </a>
-      <a class="anchor" href="#contact"> Contact </a>
-      <a class="anchor" href="#home"> Gallery </a>
-      <a class="anchor" href="#help"> Help </a>
-    </nav>
+<div class="row g-4">
 
-  </header>
+<!-- Card 1 -->
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card h-100">
 
-  <img src="c:\Users\NQ003.NEOTEQ\Desktop\E_Gold_desktop_1132x466.jpg" class="img"> </img>
+<img src="web-design.png" class="card-img-top" alt="Web Design" style="height: 280px; object-fit: cover;">
 
-  <h3 style="margin-top: 10px;"> Collections </h1>
+<div class="card-body">
+<h5 class="card-title">Web Design</h5>
+<p class="card-text">
+We create modern and responsive website designs using HTML, CSS and Bootstrap.
+</p>
 
-    <p> India is the land of rich traditions and vibrant festivals. It is renowned for its heritage of traditional
-      jewellery with immense cultural and emotional significance. In this blog, let’s explore Indian traditional
-      jewellery from head to toe. Let’s get started!
-    </p>
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">
+Read More
+</button>
 
-    <div class='section' id='home'>
+</div>
+</div>
+</div>
 
-      <section class="card">
-        <img
-          src="https://www.vummidi.com/blog/wp-content/uploads/2023/11/Indian-Traditional-Jewellery-from-Head-to-Toe.png"
-          alt="jewellry" width="340px" height=240px; style='margin-left: 25dp;'> </img>
+<!-- Card 2 -->
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card h-100">
 
-        <p class="tag"> Wedding Party Gold Necklace Jewellery Set </p>
+<img src="web-development.png" class="card-img-top" alt="Web Development" style="height: 280px;; object-fit: cover;">
 
-        <p class="description">
-          Elegant crystal necklace set designed for weddings, receptions, and special occasions.
-          This beautiful jewellery set features sparkling stones with a premium finish that
-          complements traditional and modern outfits. Lightweight, stylish, and perfect for
-          bridal wear or festive celebrations.
-        </p>
-      </section>
+<div class="card-body">
+<h5 class="card-title">Web Development</h5>
+<p class="card-text">
+Building responsive and functional websites using modern technologies.
+</p>
 
-      <section class="card">
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">
+Read More
+</button>
 
-        <img
-          src='https://cdn.shopify.com/s/files/1/0522/8095/0955/files/137A45876_15f1b7ed-80c1-43bc-a120-a9e728b7cc11_x500.jpg?v=1697525229'
-          alt="design set" width='340px' height='240px' style='margin-left: 25dp;'> </img>
+</div>
+</div>
+</div>
 
+<!-- Card 3 -->
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card h-100">
 
-        <p class="tag"> Wedding Party Crystal Necklace Jewellery Set</p>
-        <p class="description">
-          Elegant crystal necklace set designed for weddings, receptions, and special occasions.
-          This beautiful jewellery set features sparkling stones with a premium finish that
-          complements traditional and modern outfits. Lightweight, stylish, and perfect for
-          bridal wear or festive celebrations.
-        </p>
-      </section>
-    </div>
-    <br> </br>
+<img src="ui-design.png" class="card-img-top" alt="UI Design" style="height: 280px; object-fit: cover;">
 
-    <div class='section' id='home'>
+<div class="card-body">
+<h5 class="card-title">UI Design</h5>
+<p class="card-text">
+Clean and modern user interface design for better user experience.
+</p>
 
-      <section class="card">
-        <img src="c:\Users\NQ003.NEOTEQ\Desktop\ring.png" alt="jewellry" width="340px" height=240px;
-          style='margin-left: 25dp;'> </img>
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">
+Read More
+</button>
 
-        <p class="tag"> Autumn Hexagon Round Diamond Ring 0.45 </p>
+</div>
+</div>
+</div>
 
-        <p class="description"> A diamond’s colour can range from colourless to shades of yellow or brown.The diamond's
-          brilliance comes from its cut. 100% BIS Hallmarked Jewellery IGI Certified 100% Certified by IGI Lifetime
-          Buyback </p>
+</div>
+</div>
 
+<!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
 
-      </section>
+<div class="modal-header">
+<h5 class="modal-title">More Information</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
 
-      <section class="card">
+<div class="modal-body">
+<p>
+This is a Bootstrap modal example. It opens when the button is clicked.
+Bootstrap helps create responsive and modern websites easily.
+</p>
+</div>
 
-        <img src='c:\Users\NQ003.NEOTEQ\Desktop\eye_jewell.png' alt="design set" width='340px' height='240px'
-          style='margin-left: 25dp;'> </img>
+<div class="modal-footer">
+<button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
 
+</div>
+</div>
+</div>
 
-        <p class="tag"> Delica Textured Nakshatra Diamond Ring 0.25</p>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <p class="description"> A diamond's price might vary significantly between two stones with the same carat since
-          other criteria are taken into account.The diamond's brilliance comes from its cut. 100% BIS Hallmarked
-          Jewellery IGI Certified 100% Certified by IGI Lifetime Buyback </p>
-
-      </section>
-    </div>
-
-    <br> </br>
-    <div id='about'>
-
-      <ol>
-        <li> By Item Type: </li>
-        <ul>
-          <li> Necklaces: Chains, chokers, pendants, collars, and statement necklaces. </li>
-          <li> Earrings: Studs, hoops, drops, jhumkas, chandbalis, and chandeliers.
-          </li>
-          <li> Rings: Engagement rings, wedding bands, cocktail rings, eternity bands, and toe rings.
-          </li>
-
-          <li> Bracelets/Hand Jewelry: Bangles, cuffs, chain bracelets, kadas, and haath phool.
-          </li>
-          <li> Body/Other Jewelry: Anklets, brooches, nose rings, waist belts (kamarbandh), bindi, and cufflinks.
-          </li>
-        </ul>
-        <br> </br>
-
-
-        <li> By Material & Composition: </li>
-        <ol>
-
-          <li> Gold: Solid, plated, vermeil, and filled gold. </li>
-          <li> Learning New thingGemstone: Diamond, pearl, zircon, ruby, emerald, and jade.</li>
-          <li> Beaded/Fashion: Glass, wood, shell, or clay beads, often considered costume jewelry. </li>
-          <li> Silver: Sterling silver, oxidized, and white metal. </li>
-        </ol>
-
-      </ol>
-    </div>
-    <div class="containerr" id='help'>
-
-      <h4 style='color : darkviolet; '> For Enquiry Contact below : </h5>
-
-        <form onsubmit=Submitfunction()>
-
-          <input placeholder='UserName' type='text' pattern="[A-Za-z]+" title="letters only" minlength="4"
-            maxlength="25" style="height: 35px; padding-left: 15px" required />
-
-          <input placeholder='Email' type="email" pattern=".+@gmail\.com"
-            style="height:  35px; margin-left:  50px; padding-left: 15px" required />
-
-          </br>
-          <input placeholder='Password' type='Password' minlength="5" maxlength="12"
-            style='margin-top :25px; height:  35px; padding-left: 15px' required />
-
-          <input placeholder="Mobile Number" type="tel" name="phone" pattern="[0-9]{10}" minlength="10" maxlength="10"
-            style='margin-top :25px; height:  35px; margin-left:  50px; padding-left: 15px' required />
-
-          </br>
-
-          <input placeholder="Message" minlength="10" maxlength="55" type='text'
-            style='margin-top :25px; height:  65px; padding-left: 15px  ;' required /> </br>
-
-          <textarea rows="10"
-            style="margin-top: 15px; margin-top :25px; height: 65px; padding-left: 5px;"> Feedback </textarea>
-
-          <br> </br>
-
-
-          <button value="Submit"
-            style="margin-top: 20px; font-weight: 800;margin-left: 150px; color: white; background-color: rgb(30, 210, 57); height: 35px;">
-            SUBMIT </button>
-
-          <br>
-          </br>
-
-          <input type="reset" value="Reset Form">
-
-        </form>
-
-        </br>
-        </br>
-        </br>
-
-
-        <div class="relative-box" id='contact'>
-          <h4> For Details Contact below Number : </h4>
-          <h6> +91 XXXXXXXXXX</h6>
-        </div>
-    </div>
-
-    <script>
-
-      function Submitfunction() {
-        alert('The form was submitted!!')
-
-        return true;
-
-      }
-
-    </script>
-
-
-    <footer class="footer">
-
-      <p style="color: blue;"> @ CopyRights </p>
-
-    </footer>
 </body>
-
-
 </html>
